@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Header from '../components/Header'
-import LoginForm from '../components/LoginForm';
+import LoginForm from '../components/login/LoginForm';
 function StartupPage() {
+  //onSuccess?
   return (
     <div className='StartupPage'>
-        <Header imageSrc="" showImage={false} />
+        <Header/>
+        <h2>Login</h2>
         <LoginForm/>
     </div>
   )

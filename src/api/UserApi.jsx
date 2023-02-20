@@ -46,3 +46,24 @@ export const loginUser = async (username) => {
     
     return createNewUser(username);
 }
+
+
+export const addTranslations = async(id, translations) => {
+    try {
+        const response = await fetch(apiUrl + '/' + id,{
+            method:'PATCH',
+            headers: createHeaders(),
+            body: JSON.stringify({
+                translations: translations
+            })
+        })
+        if(!response.ok){
+            throw new Error("Something went wrong!")
+        }
+
+        const data = await response.json()
+        return [null, data]
+    } catch (error){
+        return [error.message, []]
+    }
+}

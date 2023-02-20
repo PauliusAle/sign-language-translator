@@ -1,0 +1,12 @@
+.header {
+    display:inline-flex;
+    width: 100%;
+    background-color: green;
+    border-style: dotted;
+    margin-bottom: 30px;
+}
+
+.header-element {
+    width: 30%;
+    text-align: center;
+}

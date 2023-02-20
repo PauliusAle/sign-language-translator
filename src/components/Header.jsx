@@ -1,11 +1,22 @@
 import React from 'react'
+import headerImage from '../images/Logo.png'
 
-function Header (props) {
+function Header ({username}) {
   return (
-    <div className="Header">
-        <h1>Lost in translation</h1>
-        {props.showImage && <img src={props.imageSrc} alt="Not available." ></img>}
-        {props.showUserName && <p>{props.userName}</p>}
+    <div className="header">
+        <div className='header-element'>
+            <img
+              src={headerImage} 
+              alt="Not available."  
+              height="70" 
+              width="70"></img>
+        </div>
+        <div className='header-element'>
+             <h1>Lost in translation</h1>
+        </div>
+        <div className='header-element'>
+             <h1>{username}</h1>
+        </div>
     </div>
   )
 }

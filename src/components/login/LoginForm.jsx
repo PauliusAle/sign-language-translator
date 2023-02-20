@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
-import { loginUser } from '../api/UserApi' 
-import { storageSave } from '../utils/storage';
+import { loginUser } from '../../api/UserApi' 
+import { storageSave } from '../../utils/storage';
 import { useNavigate } from 'react-router-dom'
-import { useUser } from '../context/UserContext';
+import { useUser } from '../../context/UserContext';
+import { STORAGE_KEY_USER } from '../../const/storageKeys';
 
 function LoginForm() {
     
@@ -12,7 +13,7 @@ function LoginForm() {
     const navigate = useNavigate();
 
     const [loading, setLoading] = useState(false);
-    const nameConfig =  {required:  true, minLength: 2,maxLength: 20}
+    const nameConfig =  {required:  true, minLength: 2, maxLength: 20}
 
     useEffect(() => {
          if(user !== null){
@@ -24,7 +25,7 @@ function LoginForm() {
         setLoading(true);
         const [error, userResponse] = await loginUser(username);
         if(userResponse != null) {
-            storageSave('translation-user',userResponse)
+            storageSave(STORAGE_KEY_USER, userResponse)
             setUser(userResponse);
         }
         setLoading(false);
