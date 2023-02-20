@@ -3,7 +3,7 @@ import React from 'react'
 function ProfileTranslationHistoryItem({translation}) {
   
   return (
-    <li>{translation}</li>
+    <li>{ translation }</li>
   )
 }
 
