@@ -1,13 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useUser } from '../../context/UserContext'
 import { STORAGE_KEY_USER } from '../../const/storageKeys'
 import { storageDelete, storageSave } from '../../utils/storage'
 import { addTranslations } from '../../api/UserApi'
 
-function ProfileActions() {
-    const {user, setUser } = useUser();
-
+function ProfileActions({user, setUser}) {
+    
     const handleLogoutClick = () =>{
         const doLogout = window.confirm("Are you sure you want to logout?")
         if(doLogout){

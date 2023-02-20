@@ -23,8 +23,8 @@ function LoginForm() {
 
     const onSubmit = async ({username}) => {
         setLoading(true);
+        console.log({username})
         const [error, userResponse] = await loginUser(username);
-
         if(error === null) {
             storageSave(STORAGE_KEY_USER, userResponse)
             setUser(userResponse);

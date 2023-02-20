@@ -6,13 +6,13 @@ import { useUser } from '../context/UserContext'
 import withAuth from '../hoc/withAuth'
 
 function ProfilePage() {
-  const { user } = useUser();
+  const { user, setUser } = useUser();
 
   return (
     <div>
       <Header username={user.username}/>
       <ProfileTranslationHistory translations={user.translations}/>
-      <ProfileActions/>
+      <ProfileActions user={user} setUser={setUser}/>
     </div>
   )
 }

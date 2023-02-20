@@ -8,13 +8,13 @@ import withAuth from '../hoc/withAuth'
 
 function TranslationPage() {
   const {user, setUser} = useUser();
-  const [input, setInput] = useState("");
+  const [translationInput, setTranslationInput] = useState("");
   
   return (
     <div>
       <Header username= {user.username}/>
-      <TranslationForm user= {user} setUser={setUser} setInput={setInput}/>
-      <TranslationOutput translationInput={input}/>
+      <TranslationForm user= {user} setUser={setUser} setTranslationInput={setTranslationInput}/>
+      <TranslationOutput translationInput={translationInput}/>
       <Link to="/profile">Go to profile!</Link>
     </div>
   )

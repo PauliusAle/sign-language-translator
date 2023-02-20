@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 
 function TranslationOutput({translationInput}) {
+  
   const [outputValue, setOutputValue] = useState("");
-
   useEffect(() => {
     makeOutput(translationInput)
   },[translationInput]);

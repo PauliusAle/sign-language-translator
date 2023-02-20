@@ -8,7 +8,8 @@ function ProfileTranslationHistory({translations}) {
  
   return (
     <section>
-        <h5> Your 10 latest translations:</h5>
+        {translationList.length === 0 
+            ? <h5> No translations available. </h5> : <h5> Your 10 latest translations: </h5>}
         <ul>
             {translationList}
         </ul>

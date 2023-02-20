@@ -4,35 +4,24 @@ import { addTranslations } from '../../api/UserApi';
 import {storageSave} from '../../utils/storage'
 import { STORAGE_KEY_USER } from '../../const/storageKeys';
 
-function TranslationForm({user,setUser, setInput}) {
+function TranslationForm({user, setUser, setTranslationInput}) {
     const { register, handleSubmit, formState:{errors} } = useForm();
-    const [userTranslations, setUserTranslations] = useState(user.translations);
-    let translationInput = React.createRef();
-    const [hasError, setHasError] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     
     const translationConfig = {
-        required: false,
-        minLength: 5,
+        required: true,
+        minLength: 1,
         maxLength: 40,
     }
-
-    const changeState = () => {
-        setUserTranslations((prevTranslations) => prevTranslations?
-            [translationInput.current.value, ...prevTranslations]: null);
-        setInput(translationInput.current.value);
-    }
-
+    
     const onSubmit = async({translation}) => {
         setIsLoading(true)
-        const [error, userResponse] = await addTranslations(user.id, userTranslations)
+        const [error, userResponse] = await addTranslations(user.id, [translation, ...user.translations])
         if(error === null){
             storageSave(STORAGE_KEY_USER, userResponse);
             setUser(userResponse)
-        } else{
-            console.log(error)
-            setHasError(true);
-        }
+        } 
+        
         setIsLoading(false)
     }
     
@@ -43,12 +32,13 @@ function TranslationForm({user,setUser, setInput}) {
             {...register("translation", translationConfig)}
             type = "text" 
             placeholder = 'What to translate?'
-            ref = {translationInput}
+            onChange={e => setTranslationInput(e.target.value)}
             ></input>
 
-            <button type="submit" onClick={changeState} disabled={isLoading}>Translate</button>
+            <button type="submit"
+                disabled={isLoading}>Translate</button>
         </form> 
-            { hasError && <p>Something went wrong!</p>}
+            { errors.name && <p>Something went wrong!</p>}
     </div>
     )
 }
