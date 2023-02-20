@@ -9,7 +9,7 @@ import { STORAGE_KEY_USER } from '../../const/storageKeys';
 function LoginForm() {
     
     const { register, handleSubmit, formState:{errors} } = useForm();//!
-    const {user, setUser} = useUser(null);
+    const { user, setUser } = useUser(null);
     const navigate = useNavigate();
 
     const [loading, setLoading] = useState(false);
@@ -24,7 +24,8 @@ function LoginForm() {
     const onSubmit = async ({username}) => {
         setLoading(true);
         const [error, userResponse] = await loginUser(username);
-        if(userResponse != null) {
+
+        if(error === null) {
             storageSave(STORAGE_KEY_USER, userResponse)
             setUser(userResponse);
         }

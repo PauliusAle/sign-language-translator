@@ -9,11 +9,11 @@ function ProfilePage() {
   const { user } = useUser();
 
   return (
-    <>
+    <div>
       <Header username={user.username}/>
       <ProfileTranslationHistory translations={user.translations}/>
       <ProfileActions/>
-    </>
+    </div>
   )
 }
 

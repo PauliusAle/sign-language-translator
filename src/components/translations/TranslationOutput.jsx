@@ -1,15 +1,15 @@
 import React, {useState, useEffect} from 'react'
 
-function TranslationOutput({input}) {
+function TranslationOutput({translationInput}) {
   const [outputValue, setOutputValue] = useState("");
 
   useEffect(() => {
-    makeOutput()
-  },[input]);
+    makeOutput(translationInput)
+  },[translationInput]);
 
-  const makeOutput = () => {
-    setOutputValue(input.split("").filter(l=>l.match("([A-Za-z])"))
-    .map((letter,index ) =>
+  const makeOutput = (input) => {
+    setOutputValue(input.split("").filter(letter=> letter.match("([A-Za-z' '])"))
+    .map((letter,index ) => letter === ' ' ? '__' :
     <img src={require('../../images/individual_signs/' + letter.toLowerCase() + '.png')} 
     key={index}
     alt="Not available!"

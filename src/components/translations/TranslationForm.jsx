@@ -1,4 +1,4 @@
-import React,{useState } from 'react'
+import React, {useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { addTranslations } from '../../api/UserApi';
 import {storageSave} from '../../utils/storage'
@@ -10,6 +10,7 @@ function TranslationForm({user,setUser, setInput}) {
     let translationInput = React.createRef();
     const [hasError, setHasError] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    
     const translationConfig = {
         required: false,
         minLength: 5,
@@ -17,7 +18,6 @@ function TranslationForm({user,setUser, setInput}) {
     }
 
     const changeState = () => {
-        console.log(user.id)
         setUserTranslations((prevTranslations) => prevTranslations?
             [translationInput.current.value, ...prevTranslations]: null);
         setInput(translationInput.current.value);

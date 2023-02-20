@@ -14,7 +14,7 @@ function TranslationPage() {
     <div>
       <Header username= {user.username}/>
       <TranslationForm user= {user} setUser={setUser} setInput={setInput}/>
-      <TranslationOutput input={input}/>
+      <TranslationOutput translationInput={input}/>
       <Link to="/profile">Go to profile!</Link>
     </div>
   )

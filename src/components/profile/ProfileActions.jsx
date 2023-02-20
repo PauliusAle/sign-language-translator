@@ -21,17 +21,20 @@ function ProfileActions() {
 
       if(doDelete){
         const [error, userResponse] = await addTranslations(user.id, [])
-        storageSave(STORAGE_KEY_USER, userResponse)
-        setUser(userResponse)
+        if(error === null){
+          storageSave(STORAGE_KEY_USER, userResponse)
+          setUser(userResponse)
+        } else{
+          console.log(error)
+        }       
       }
-
     }
   return (
-    <ul>
-        <li> <Link to="/translation">Translation Page </Link></li>
-        <li><button onClick={handleDeleteHistory}>Clear history</button></li>
-        <li><button onClick={handleLogoutClick}>Logout </button></li>
-    </ul>
+    <div>
+        <Link to="/translation">Translation Page </Link>
+        <button onClick={handleDeleteHistory}>Clear history</button>
+        <button onClick={handleLogoutClick}>Logout </button>
+    </div>
   )
 }
 
