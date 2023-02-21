@@ -29,7 +29,10 @@ function ProfileActions({user, setUser}) {
     }
   return (
     <div>
-        <Link to="/translation">Translation Page </Link>
+        <div>
+          <Link to="/translation">Translation Page </Link>
+        </div>
+        <p></p>
         <button onClick={handleDeleteHistory}>Clear history</button>
         <button onClick={handleLogoutClick}>Logout </button>
     </div>

@@ -9,8 +9,10 @@ function ProfileTranslationHistory({translations}) {
   return (
     <section>
         {translationList.length === 0 
-            ? <h5> No translations available. </h5> : <h5> Your 10 latest translations: </h5>}
-        <ul>
+            ? <h5> No translation history. </h5> 
+            : <h5> Your {translationList.length} latest translations: </h5>
+        }
+        <ul className='ul-element'>
             {translationList}
         </ul>
     </section>

@@ -10,3 +10,17 @@
     width: 30%;
     text-align: center;
 }
+
+.ul-element {
+    
+}
+
+.li-element {
+    padding: 10px;
+    height:25px
+}
+
+.li-button {
+    margin-left: 20px;
+    margin-right: 10px;
+}
