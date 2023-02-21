@@ -12,7 +12,7 @@ function TranslationOutput({ translationInput, height, width }) {
       input
         .split("")
         .filter((letter) => letter.match("([A-Za-z' '])"))
-        .map((letter, index) => letter === " " ? "\u00A0 \u00A0 \u00A0 \u00A0" : 
+        .map((letter, index) => letter === " " ?  "\u00A0\u00A0\u00A0\u00A0" : 
         (
             <img
               className="hand-sign-logo"

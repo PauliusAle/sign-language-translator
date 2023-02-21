@@ -16,7 +16,7 @@ function TranslationForm({ user, setUser, setTranslationInput }) {
   const translationConfig = {
     required: true,
     minLength: 1,
-    maxLength: 30,
+    maxLength: 40,
   };
 
   const onSubmit = async ({ translation }) => {
