@@ -33,18 +33,18 @@ function LoginForm() {
     }
 
     return (
-        <div>
+        <div className='submit-form'>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input 
+                    className='input-text'
                     id="loginInput" 
                     type="text"
                     {...register( "username", nameConfig)} //!!
                     placeholder="What's your name?" 
                  />
-                 <button id="loginButton" type="submit" disabled={loading}>Login</button>
+                 <button className='submit-button' id="loginButton" type="submit" disabled={loading}>Login</button>
             </form>
             {errors.name && <p>Invalid name!</p>}
-            {loading && <p>Loading user...</p>}
         </div>
     )
 }

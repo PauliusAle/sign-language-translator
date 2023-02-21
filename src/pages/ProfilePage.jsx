@@ -9,8 +9,8 @@ function ProfilePage() {
   const { user, setUser } = useUser();
 
   return (
-    <div>
-      <Header username={user.username}/>
+    <div className='page-container'>
+      <Header username={user.username} link="/translation"/>
       <ProfileTranslationHistory translations={user.translations}/>
       <ProfileActions user={user} setUser={setUser}/>
     </div>

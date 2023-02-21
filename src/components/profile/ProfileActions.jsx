@@ -28,13 +28,9 @@ function ProfileActions({user, setUser}) {
       }
     }
   return (
-    <div>
-        <div>
-          <Link to="/translation">Translation Page </Link>
-        </div>
-        <p></p>
-        <button onClick={handleDeleteHistory}>Clear history</button>
-        <button onClick={handleLogoutClick}>Logout </button>
+    <div className='profile-buttons'>
+        <button className='profile-button' onClick={handleDeleteHistory}>Clear history</button>
+        <button className='profile-button' onClick={handleLogoutClick}>Logout </button>
     </div>
   )
 }

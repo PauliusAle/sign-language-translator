@@ -3,21 +3,20 @@ import Header from '../components/Header';
 import TranslationForm from '../components/translations/TranslationForm';
 import TranslationOutput from '../components/translations/TranslationOutput';
 import { useUser } from '../context/UserContext'
-import { Link } from 'react-router-dom'
 import withAuth from '../hoc/withAuth'
+
 
 function TranslationPage() {
   const {user, setUser} = useUser();
   const [translationInput, setTranslationInput] = useState("");
   
   return (
-    <div>
-      <Header username= {user.username}/>
+    <div className = 'page-container'>
+      <Header username= {user.username} link="/profile" />
       <TranslationForm user= {user} setUser={setUser} setTranslationInput={setTranslationInput}/>
       <div>
-        <TranslationOutput translationInput={translationInput} height="50px" width="50px"/>
+        <TranslationOutput translationInput={translationInput} height="60px" width="60px"/>
       </div>
-      <Link to="/profile">Go to profile!</Link>
     </div>
   )
 }

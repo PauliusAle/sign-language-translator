@@ -1,26 +1,55 @@
 .header {
     display:inline-flex;
     width: 100%;
-    background-color: green;
-    border-style: dotted;
+    background-color: bisque;
     margin-bottom: 30px;
+    border-radius: 10px;
 }
 
 .header-element {
-    width: 30%;
+    width: 33%;
     text-align: center;
 }
 
+#profile-link {
+    text-align: right;
+}
+
+#header-logo {
+    text-align: left
+}
+
+body {
+    background-color: beige;
+    padding:10px;
+    font-family: sans-serif;
+}
+
+.submit-form {
+    width: fit-content;
+    border-style: groove;
+    border-width: 8px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.input-text {
+    width: 450px;
+    font-size: 20px;
+    border-style: hidden;
+}
+
 .ul-element {
-    
+    list-style: decimal;
 }
 
 .li-element {
-    padding: 10px;
-    height:25px
+    padding: 5px;
+    font-size: 20px;
+    vertical-align: top;
 }
 
-.li-button {
-    margin-left: 20px;
-    margin-right: 10px;
+.hand-sign-logo {
+    position: relative;
+    vertical-align: bottom;
 }
