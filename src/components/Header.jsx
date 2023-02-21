@@ -5,7 +5,7 @@ import helloImage from '../images/Logo-Hello.png'
 import { Link } from 'react-router-dom'
 
 
-function Header ({username, link, showButtons}) {
+function Header ({username, link, linkText}) {
   const {user} = useUser();
   return (
     <div className="header">
@@ -20,7 +20,7 @@ function Header ({username, link, showButtons}) {
              <h1>Lost in translation</h1>
         </div>
         <div className='header-element' id='profile-link'>
-            {user && <h1><Link className='link' to={link}>Go!</Link> {username} </h1>} 
+            {user && <h1><Link className='link' to={link}>{linkText}</Link>▶{username} </h1>} 
         </div>
     </div>
   )

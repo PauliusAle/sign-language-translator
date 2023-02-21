@@ -12,7 +12,7 @@ function TranslationPage() {
   
   return (
     <div className = 'page-container'>
-      <Header username= {user.username} link="/profile" />
+      <Header username= {user.username} link="/profile" linkText="Profile"/>
       <TranslationForm user= {user} setUser={setUser} setTranslationInput={setTranslationInput}/>
       <div>
         <TranslationOutput translationInput={translationInput} height="60px" width="60px"/>

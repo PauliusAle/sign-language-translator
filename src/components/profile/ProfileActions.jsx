@@ -29,7 +29,7 @@ function ProfileActions({user, setUser}) {
     }
   return (
     <div className='profile-buttons'>
-        <button className='profile-button' onClick={handleDeleteHistory}>Clear history</button>
+        {user.translations.length > 0 && <button className='profile-button' onClick={handleDeleteHistory}>Clear history</button>}
         <button className='profile-button' onClick={handleLogoutClick}>Logout </button>
     </div>
   )

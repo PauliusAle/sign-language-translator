@@ -10,7 +10,7 @@ function ProfilePage() {
 
   return (
     <div className='page-container'>
-      <Header username={user.username} link="/translation"/>
+      <Header username={user.username} link="/translation" linkText="Translate"/>
       <ProfileTranslationHistory translations={user.translations}/>
       <ProfileActions user={user} setUser={setUser}/>
     </div>
