@@ -4,7 +4,7 @@ import TranslationForm from "../components/translations/TranslationForm";
 import TranslationOutput from "../components/translations/TranslationOutput";
 import { useUser } from "../context/UserContext";
 import withAuth from "../hoc/withAuth";
-
+//test
 function TranslationPage() {
   const { user, setUser } = useUser();
   const [translationInput, setTranslationInput] = useState("");
