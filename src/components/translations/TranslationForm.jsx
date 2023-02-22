@@ -22,7 +22,10 @@ function TranslationForm({ user, setUser, setTranslationInput }) {
   const onSubmit = async ({ translation }) => {
     setIsLoading(true);
     setTranslationInput(translation);
-    const [error, userResponse] = await addTranslations(user.id, [translation, ...user.translations]);
+    const [error, userResponse] = await addTranslations(user.id, [
+      translation,
+      ...user.translations,
+    ]);
     if (error === null) {
       storageSave(STORAGE_KEY_USER, userResponse);
       setUser(userResponse);
@@ -32,16 +35,16 @@ function TranslationForm({ user, setUser, setTranslationInput }) {
   };
 
   return (
-    <div className="submit-form">
+    <div id="translation-form" className="submit-form">
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          className='input-text'
+          className="input-text"
           {...register("translation", translationConfig)}
           type="text"
           placeholder="What to translate?"
         ></input>
 
-        <button className='submit-button' type="submit" disabled={isLoading}>
+        <button className="submit-button" type="submit" disabled={isLoading}>
           Translate
         </button>
       </form>

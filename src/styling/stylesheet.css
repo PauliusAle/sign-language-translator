@@ -9,6 +9,7 @@
 .header-element {
     width: 33%;
     text-align: center;
+    font-style: normal;
 }
 
 #profile-link {
@@ -27,10 +28,13 @@ body {
 
 .submit-form {
     width: fit-content;
-    border-style: groove;
-    border-width: 8px;
-    border-radius: 10px;
+    border-style: solid;
+    border-radius: 9px;
+    border-width: 5px;
+    border-color: burlywood;
+    box-shadow: 0 1px 8px;
     background-color: white;
+    text-align: center;
 }
 
 .input-text {
@@ -44,7 +48,7 @@ body {
 }
 
 .li-element {
-    padding: 5px;
+    padding: 3px;
     font-size: 20px;
     vertical-align: top;
 }
@@ -52,4 +56,26 @@ body {
 .hand-sign-logo {
     position: relative;
     vertical-align: bottom;
+    background-color: bisque;
+    border-radius: 10px;
+    margin-bottom: 2px;
 }
+
+#translation-output {
+    border-style: solid;
+    border-radius: 30px;
+    border-width: 10px;
+    border-color: burlywood;
+    box-shadow: 0 3px 10px;
+    padding-top: 3px;
+    padding-left: 5px;
+    height: 190px;
+    width: 1080px    
+}
+#header-title {
+    font-size: 45px;
+}
+a:link {
+    text-decoration: none;
+}
+a:hover { text-decoration: underline; }

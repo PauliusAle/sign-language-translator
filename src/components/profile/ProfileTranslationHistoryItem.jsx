@@ -10,7 +10,11 @@ function ProfileTranslationHistoryItem({ translation }) {
   return (
     <li className="li-element">
       {translation}
-      <button className="li-button" onClick={handleShowTranslation} type="button">
+      <button
+        className="li-button"
+        onClick={handleShowTranslation}
+        type="button"
+      >
         {show ? "Hide translation" : "Show translation"}
       </button>
       {show && (

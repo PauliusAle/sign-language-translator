@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function TranslationOutput({ translationInput, height, width }) {
+function TranslationOutput({ translationInput, height, width, id }) {
   const [outputValue, setOutputValue] = useState("");
 
   useEffect(() => {
@@ -12,11 +12,15 @@ function TranslationOutput({ translationInput, height, width }) {
       input
         .split("")
         .filter((letter) => letter.match("([A-Za-z' '])"))
-        .map((letter, index) => letter === " " ?  "\u00A0\u00A0\u00A0\u00A0" : 
-        (
+        .map((letter, index) =>
+          letter === " " ? (
+            "\u00A0\u00A0\u00A0\u00A0"
+          ) : (
             <img
               className="hand-sign-logo"
-              src={require("../../images/individual_signs/" + letter.toLowerCase() +".png")}
+              src={require("../../images/individual_signs/" +
+                letter.toLowerCase() +
+                ".png")}
               key={index}
               alt="Not available!"
               height={height}
@@ -27,7 +31,7 @@ function TranslationOutput({ translationInput, height, width }) {
     );
   };
 
-  return <>{outputValue}</>;
+  return <p id={id}>{outputValue}</p>;
 }
 
 export default TranslationOutput;
