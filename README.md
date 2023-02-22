@@ -22,7 +22,7 @@ npm, npx, Node.js.
 A user of this web-site will be able to:
 - Register a user on the login page.
 - Translate words(1-40 characters) in the translate page.
-- See up to 10 latest translations in the profile page.
+- See up to 10 latest translations and preview their translation in the profile page.
 - Remove all translations, logout or continue translating.
 
 ## Maintainers
