@@ -4,7 +4,9 @@ import headerImage from "../images/Logo.png";
 import helloImage from "../images/Logo-Hello.png";
 import { Link } from "react-router-dom";
 
-function Header({ username, link, linkText }) {
+//Header component for all pages for consistent design and reusability.
+//Made to show Link and Username when user is logged in.
+function Header({link, linkText }) {
   const { user } = useUser();
   return (
     <div className="header">
@@ -25,7 +27,7 @@ function Header({ username, link, linkText }) {
             <Link className="link" to={link}>
               {linkText + "➤"}
             </Link>{" "}
-            {username}{" "}
+            {user.username}{" "}
           </h1>
         )}
       </div>

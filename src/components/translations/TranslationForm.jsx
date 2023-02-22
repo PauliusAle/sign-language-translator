@@ -1,36 +1,36 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { addTranslations } from "../../api/UserApi";
+import { updateUserTranslations } from "../../api/UserApi";
 import { storageSave } from "../../utils/storage";
 import { STORAGE_KEY_USER } from "../../const/storageKeys";
 
+//Component for taking input and calling the API.
 function TranslationForm({ user, setUser, setTranslationInput }) {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm();
+  } = useForm(); //useForm hook from React-hook-library
 
   const [isLoading, setIsLoading] = useState(false);
-
+  //Validation for Input
   const translationConfig = {
     required: true,
     minLength: 1,
     maxLength: 40,
   };
 
+  //Called on submit via submit button click.
   const onSubmit = async ({ translation }) => {
-    setIsLoading(true);
-    setTranslationInput(translation);
-    const [error, userResponse] = await addTranslations(user.id, [
-      translation,
-      ...user.translations,
+    setIsLoading(true); //used for disabling buttons.
+    setTranslationInput(translation);//Set Translation input state in Page to given translation.
+    const [error, userResponse] = await updateUserTranslations(user.id, [ //API call with user id and...
+      translation,//new translation in front of the list.
+      ...user.translations, //and already existing translations.
     ]);
-    if (error === null) {
-      storageSave(STORAGE_KEY_USER, userResponse);
-      setUser(userResponse);
+    if (error === null) { //if no error
+      storageSave(STORAGE_KEY_USER, userResponse); //update local storage.
+      setUser(userResponse); //update global user state with the new translation list.
     }
-
     setIsLoading(false);
   };
 
@@ -39,7 +39,7 @@ function TranslationForm({ user, setUser, setTranslationInput }) {
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-text"
-          {...register("translation", translationConfig)}
+          {...register("translation", translationConfig)}// used for retrieving the input value and applying validation.
           type="text"
           placeholder="What to translate?"
         ></input>
@@ -48,7 +48,6 @@ function TranslationForm({ user, setUser, setTranslationInput }) {
           Translate
         </button>
       </form>
-      {errors.name && <p>Something went wrong!</p>}
     </div>
   );
 }

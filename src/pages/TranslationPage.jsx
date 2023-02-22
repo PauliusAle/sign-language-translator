@@ -5,8 +5,11 @@ import TranslationOutput from "../components/translations/TranslationOutput";
 import { useUser } from "../context/UserContext";
 import withAuth from "../hoc/withAuth";
 
+//Page for Translations - contains header, translation form(input), and translation output.
 function TranslationPage() {
+  //Creating user object here and sending it as props - Design choice for learning purposes.
   const { user, setUser } = useUser();
+  //Translation input that is set in the TranslationForm and sent for translation and display to TranslationOutput.
   const [translationInput, setTranslationInput] = useState("");
 
   return (
@@ -18,7 +21,7 @@ function TranslationPage() {
         setTranslationInput={setTranslationInput}
       />
       <TranslationOutput
-        id="translation-output"
+        outputId="translation-output"
         translationInput={translationInput}
         height="60px"
         width="60px"

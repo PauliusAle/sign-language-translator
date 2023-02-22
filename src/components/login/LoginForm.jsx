@@ -6,17 +6,18 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserContext";
 import { STORAGE_KEY_USER } from "../../const/storageKeys";
 
+//Component to handle login input and API call.
 function LoginForm() {
   const {
     register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const { user, setUser } = useUser(null);
+    handleSubmit
+  } = useForm(); //useForm hook from React-hook-library
+
+  const { user, setUser } = useUser(null); //User object - initially null
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
-  const nameConfig = { required: true, minLength: 2, maxLength: 20 };
+  const nameConfig = { required: true, minLength: 2, maxLength: 20 };//Input validation
 
   useEffect(() => {
     if (user !== null) {
@@ -24,12 +25,13 @@ function LoginForm() {
     }
   }, [user, navigate]);
 
+  //On submit function that is handled by react-form and triggered by submit button.
   const onSubmit = async ({ username }) => {
     setLoading(true);
-    const [error, userResponse] = await loginUser(username);
+    const [error, userResponse] = await loginUser(username); //loginUser API call with given username
     if (error === null) {
-      storageSave(STORAGE_KEY_USER, userResponse);
-      setUser(userResponse);
+      storageSave(STORAGE_KEY_USER, userResponse); //create user in local storage.
+      setUser(userResponse); //set global user state to the response from API call.
     }
     setLoading(false);
   };
@@ -41,7 +43,7 @@ function LoginForm() {
           className="input-text"
           id="loginInput"
           type="text"
-          {...register("username", nameConfig)}
+          {...register("username", nameConfig)} //retrieving input and applying validation.
           placeholder="What's your name?"
         />
         <button
@@ -53,7 +55,6 @@ function LoginForm() {
           Login
         </button>
       </form>
-      {errors.name && <p>Invalid name!</p>}
     </div>
   );
 }

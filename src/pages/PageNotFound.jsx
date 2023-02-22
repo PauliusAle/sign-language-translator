@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//Page for invalid URL.
 function PageNotFound() {
   return (
     <div className="page-container">

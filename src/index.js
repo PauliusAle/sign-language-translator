@@ -5,9 +5,10 @@ import AppContext from './context/AppContext';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+//App.js file wrapped in AppContext to use global state in the whole system.
 root.render(
   <React.StrictMode>
-    <AppContext>
+    <AppContext> 
       <App />
     </AppContext>
   </React.StrictMode>

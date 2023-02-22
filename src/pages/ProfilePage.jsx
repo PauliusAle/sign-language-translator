@@ -4,8 +4,9 @@ import Header from "../components/Header";
 import ProfileTranslationHistory from "../components/profile/ProfileTranslationHistory";
 import { useUser } from "../context/UserContext";
 import withAuth from "../hoc/withAuth";
-
+//Page for profile, contains header, actions (buttons) and translation history.
 function ProfilePage() {
+  //Creating user object here and sending it as props - Design choice for learning purposes.
   const { user, setUser } = useUser();
 
   return (
@@ -18,7 +19,7 @@ function ProfilePage() {
       <div>
         <ProfileActions user={user} setUser={setUser} />
       </div>
-      <ProfileTranslationHistory translations={user.translations} />
+        <ProfileTranslationHistory translations={user.translations} />
     </div>
   );
 }

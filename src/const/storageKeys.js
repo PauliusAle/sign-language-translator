@@ -1,1 +1,1 @@
-export const STORAGE_KEY_USER = 'translation-user'
+export const STORAGE_KEY_USER = 'translation-user' //JavaScript class for storing variables.
