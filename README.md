@@ -1,10 +1,14 @@
 # Lost in translation
 ## Project's background
-This project is the 2nd Front-End assignment in the Experis Academy. The purpose of this project is to get basic knowledge about React-hooks, functional components, state management, page navigation and proper structure of React.
+### Project
+This project is the 2nd Front-End assignment in the Experis Academy.<br/>
+The purpose of this project was to get basic knowledge about React-hooks, functional components, state management, retrieving data from an API, page navigation and structuring React projects.<br/>
+We also learned how to host JSON server using <a href="https://railway.app/">railway</a> and deploying websites with <a href="">SOMETHING</a>.
 
 ### Technologies
 React, HTML, CSS, ContextAPI.
-*React-Redux was attempted after the project was completed, but it was unsuccessful.
+**React-Redux was attempted after the project was completed, but it was unsuccessful.**
+
 ## Install
 
 ### IDE
