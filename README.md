@@ -6,7 +6,7 @@ The purpose of this project was to get basic knowledge about React-hooks, functi
 We also learned how to host JSON server using <a href="https://railway.app/">railway</a> and deploying websites with <a href="">SOMETHING</a>.
 
 ### Technologies
-React, HTML, CSS, ContextAPI.
+React, HTML, CSS, ContextAPI.<br/>
 **React-Redux was attempted after the project was completed, but it was unsuccessful.**
 
 ## Install
