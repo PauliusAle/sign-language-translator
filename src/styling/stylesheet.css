@@ -1,7 +1,6 @@
 .header {
     display:inline-flex;
     width: 100%;
-    background-color: bisque;
     margin-bottom: 30px;
     border-radius: 10px;
 }
@@ -21,9 +20,14 @@
 }
 
 body {
-    background-color: beige;
+    background: linear-gradient(
+        to bottom,
+        #fec695, 
+        #fef595,
+        #f9f8dc);
+    background-attachment: fixed;
     padding:10px;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .submit-form {
@@ -56,7 +60,8 @@ body {
 .hand-sign-logo {
     position: relative;
     vertical-align: bottom;
-    background-color: bisque;
+    border-style: solid;
+    border-color: #fec695;    
     border-radius: 10px;
     margin-bottom: 2px;
 }

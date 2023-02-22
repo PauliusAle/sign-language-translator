@@ -45,7 +45,7 @@ function TranslationForm({ user, setUser, setTranslationInput }) {
         ></input>
 
         <button className="submit-button" type="submit" disabled={isLoading}>
-          Translate
+          ➜
         </button>
       </form>
     </div>
