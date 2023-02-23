@@ -1,11 +1,20 @@
-.submit-button {
+
+.button {
+    height: 50px;
+    background-color: rgb(91, 99, 184);
+    border-color: transparent;
+    border-radius: 25px;
+    font-family: Sanchez;
+    color: white;
     font-size: 20px;
 }
 
 .li-button {
     margin-left: 20px;
     margin-right: 10px;
-    width:115px;
+    width:200px;
+    height: 30px;
+    border-radius: 15;
 }
 
 .profile-buttons {
@@ -14,6 +23,46 @@
 }
 
 .profile-button {
-    font-size: 20px;
     margin: 5px;
+    border-radius: 25px;
+    font-family: Sanchez;
+    background-color: rgb(91, 99, 184);
+    color: white;
+    border-color: transparent;
+}
+
+.submit-button {
+    width: 50px;
+    position: relative;
+    top: -12px;
+}
+
+.button:hover {
+    background-color: rgb(115, 120, 184);
+}
+
+.button:active {
+    background-color: rgb(74, 83, 185);
+}
+
+.btn-arrow-line {
+    position: absolute;
+    border: 3px solid white;
+    border-radius: 2px;
+    top: 1.5px;
+    left: 5px;
+    width: 30px;
+}
+
+.arrow-right {
+    position: absolute;
+    top: -9px;
+    left: 11px;
+    border: solid white;
+    border-width: 0 6px 6px 0;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }

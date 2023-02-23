@@ -14,7 +14,7 @@ function ProfileTranslationHistoryItem({ translation }) {
     <li className="li-element">
       {translation} {/* Translation that is passed as prop */}
       <button //Rest is extra for better UX. Button that allows showing/hiding translation of each translation in the UL.
-        className="li-button"
+        className="button li-button"
         onClick={handleShowTranslation}
         type="button"
       >

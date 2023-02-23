@@ -44,8 +44,9 @@ function TranslationForm({ user, setUser, setTranslationInput }) {
           placeholder="What to translate?"
         ></input>
 
-        <button className="submit-button" type="submit" disabled={isLoading}>
-          ➜
+        <button className="button submit-button" type="submit" disabled={isLoading}>
+          <p className="btn-arrow-line"></p>
+          <p className="arrow-right"></p>
         </button>
       </form>
     </div>

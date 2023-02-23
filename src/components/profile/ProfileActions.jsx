@@ -29,11 +29,11 @@ function ProfileActions({ user, setUser }) {
   };
   return (
     <div className="profile-buttons">
-      <button className="profile-button" onClick={handleLogoutClick}>
+      <button className="button profile-button" onClick={handleLogoutClick}>
         Logout{" "}
       </button>
       {user.translations.length > 0 && ( // hide button if user does not have any translations.
-        <button className="profile-button" onClick={handleDeleteHistory}>
+        <button className="button profile-button" onClick={handleDeleteHistory}>
           Clear history
         </button>
       )}

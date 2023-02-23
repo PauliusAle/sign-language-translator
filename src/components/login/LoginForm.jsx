@@ -37,7 +37,7 @@ function LoginForm() {
   };
 
   return (
-    <div className="submit-form">
+    <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-text"
@@ -47,12 +47,13 @@ function LoginForm() {
           placeholder="What's your name?"
         />
         <button
-          className="submit-button"
+          className="button submit-button"
           id="loginButton"
           type="submit"
           disabled={loading}
         >
-          Login
+          <p className="btn-arrow-line"></p>
+          <p className="arrow-right"></p>
         </button>
       </form>
     </div>
