@@ -23,7 +23,6 @@
 }
 
 button:hover {
-    border-width: 2px;
     filter: brightness(90%)
 }
 
