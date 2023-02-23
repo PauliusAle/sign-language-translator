@@ -43,7 +43,12 @@ body {
     font-family: Sanchez;
     color: rgb(91, 99, 184);
 }
-
+.submit-form {
+    border-color: #fec695;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 30px;
+}
 .input-text:focus {
     outline: none;
 }
@@ -97,7 +102,6 @@ a:hover { text-decoration: underline; }
     height: 60px;
     display: flex;
     justify-content: center;
-
     background: #FFF2CF;
     border-radius: 30px;
 }
