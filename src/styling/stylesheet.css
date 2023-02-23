@@ -27,13 +27,13 @@ body {
         #f9f8dc);
     background-attachment: fixed;
     padding:10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Gill Sans MT'
 }
 
 .submit-form {
     width: fit-content;
     border-style: solid;
-    border-radius: 9px;
+    border-radius: 25px;
     border-width: 5px;
     border-color: burlywood;
     box-shadow: 0 1px 8px;
@@ -45,6 +45,7 @@ body {
     width: 450px;
     font-size: 20px;
     border-style: hidden;
+    margin-left: 7px
 }
 
 .ul-element {

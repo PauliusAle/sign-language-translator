@@ -13,7 +13,7 @@ function TranslationPage() {
   const [translationInput, setTranslationInput] = useState("");
 
   return (
-    <div id="translation-page">
+    <div id="page-container">
       <Header username={user.username} link="/profile" linkText="Profile" />
       <TranslationForm
         user={user}

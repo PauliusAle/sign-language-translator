@@ -1,11 +1,15 @@
 .submit-button {
     font-size: 20px;
+    border-radius: 20px;
+    background-color: coral;
+    width: 60px;
+    height: 40px;
 }
 
 .li-button {
     margin-left: 20px;
     margin-right: 10px;
-    width:115px;
+    width:120px;
 }
 
 .profile-buttons {
@@ -16,4 +20,13 @@
 .profile-button {
     font-size: 20px;
     margin: 5px;
+}
+
+button:hover {
+    border-width: 2px;
+    filter: brightness(90%)
+}
+
+button:active{
+    transform: scale(0.95);
 }
