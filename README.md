@@ -3,7 +3,7 @@
 ### Project
 This project is the 2nd Front-End assignment in the Experis Academy.<br/>
 The purpose of this project was to get basic knowledge about React-hooks, functional components, state management, retrieving data from an API, page navigation and structuring React projects.<br/>
-We also learned how to host JSON server and deploying websites using <a href="https://railway.app/">railway</a>.
+We also learned how to host a JSON server and deploy a website using <a href="https://railway.app/">railway</a>.
 
 ### Technologies
 React, HTML, CSS, ContextAPI.<br/>
