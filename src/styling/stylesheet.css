@@ -27,25 +27,25 @@ body {
         #f9f8dc);
     background-attachment: fixed;
     padding:10px;
-    font-family: 'Gill Sans MT'
+    font-family: Sanchez;
+    color: rgb(91, 99, 184);
 }
 
-.submit-form {
-    width: fit-content;
-    border-style: solid;
-    border-radius: 25px;
-    border-width: 5px;
-    border-color: burlywood;
-    box-shadow: 0 1px 8px;
-    background-color: white;
-    text-align: center;
-}
 
 .input-text {
-    width: 450px;
-    font-size: 20px;
-    border-style: hidden;
-    margin-left: 7px
+    background-color: transparent;
+    border-color: transparent;
+    height: 60px;
+    width: 514px;
+    left: 20px;
+    position: relative;
+    font-size: x-large;
+    font-family: Sanchez;
+    color: rgb(91, 99, 184);
+}
+
+.input-text:focus {
+    outline: none;
 }
 
 .ul-element {
@@ -75,13 +75,29 @@ body {
     box-shadow: 0 3px 10px;
     padding-top: 3px;
     padding-left: 5px;
-    height: 190px;
+    height: 200px;
     width: 1080px    
 }
+
+@import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
+@import url('https://fonts.googleapis.com/css?family=Sanchez');
+
 #header-title {
-    font-size: 45px;
+    font-size: 50px;
+    color: rgb(91, 99, 184);
+    font-family: 'Love Ya Like A Sister';
 }
 a:link {
     text-decoration: none;
 }
 a:hover { text-decoration: underline; }
+
+.text-field {
+    width: 580px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+
+    background: #FFF2CF;
+    border-radius: 30px;
+}

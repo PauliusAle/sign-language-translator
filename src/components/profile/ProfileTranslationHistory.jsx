@@ -10,7 +10,6 @@ function ProfileTranslationHistory({ translations }) {
           <ProfileTranslationHistoryItem key={index} translation={item} />
         ))
     : null;
-
   return (
     <div>
       {translationList.length === 0 ? ( //If no translations

@@ -15,11 +15,13 @@ function TranslationPage() {
   return (
     <div id="page-container">
       <Header username={user.username} link="/profile" linkText="Profile" />
-      <TranslationForm
-        user={user}
-        setUser={setUser}
-        setTranslationInput={setTranslationInput}
-      />
+      <div className="text-field">
+        <TranslationForm
+          user={user}
+          setUser={setUser}
+          setTranslationInput={setTranslationInput}
+        />
+      </div>
       <TranslationOutput
         outputId="translation-output"
         translationInput={translationInput}

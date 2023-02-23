@@ -6,8 +6,10 @@ function StartupPage() {
   return (
     <div className="page-container">
       <Header />
-      <h2>Login</h2>
-      <LoginForm />
+      <h1>Login</h1>
+      <div className="text-field">
+        <LoginForm />
+      </div>
     </div>
   );
 }
