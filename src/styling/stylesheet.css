@@ -77,10 +77,18 @@ body {
     height: 190px;
     width: 1080px    
 }
+
+@import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
+
 #header-title {
-    font-size: 45px;
+    font-size: 50px;
+    color: rgb(91, 99, 184);
+    font-family: 'Love Ya Like A Sister';
 }
 a:link {
     text-decoration: none;
 }
 a:hover { text-decoration: underline; }
+
+
+
