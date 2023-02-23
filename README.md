@@ -3,7 +3,7 @@
 ### Project
 This project is the 2nd Front-End assignment in the Experis Academy.<br/>
 The purpose of this project was to get basic knowledge about React-hooks, functional components, state management, retrieving data from an API, page navigation and structuring React projects.<br/>
-We also learned how to host JSON server using <a href="https://railway.app/">railway</a> and deploying websites with <a href="">SOMETHING</a>.
+We also learned how to host JSON server and deploying websites using <a href="https://railway.app/">railway</a>.
 
 ### Technologies
 React, HTML, CSS, ContextAPI.<br/>
@@ -20,7 +20,7 @@ npm, npx, Node.js.
 ## Usage
 ### Cloning the Project
 1. Clone the git repository from : https://github.com/PauliusAle/sign-language-translator
-2. Add you .env variables: REACT_APP_API_KEY and REACT_APP_API_URL
+2. Add your .env variables: REACT_APP_API_KEY and REACT_APP_API_URL
 3. Type "npm start" in the terminal window.
 
 ### Flow
