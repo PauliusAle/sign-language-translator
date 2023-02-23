@@ -20,7 +20,8 @@ npm, npx, Node.js.
 ## Usage
 ### Cloning the Project
 1. Clone the git repository from : https://github.com/PauliusAle/sign-language-translator
-2. Type "npm start" in the terminal window.
+2. Add you .env variables: REACT_APP_API_KEY and REACT_APP_API_URL
+3. Type "npm start" in the terminal window.
 
 ### Flow
 A user of this web-site will be able to:
