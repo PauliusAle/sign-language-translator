@@ -5,12 +5,14 @@ import { storageSave } from "../../utils/storage";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserContext";
 import { STORAGE_KEY_USER } from "../../const/storageKeys";
+import { FaArrowRight } from "../../../node_modules/react-icons/fa";
 
 //Component to handle login input and API call.
 function LoginForm() {
   const {
     register,
-    handleSubmit
+    handleSubmit,
+    formState: {errors}
   } = useForm(); //useForm hook from React-hook-library
 
   const { user, setUser } = useUser(null); //User object - initially null
@@ -36,6 +38,17 @@ function LoginForm() {
     setLoading(false);
   };
 
+  const errorMsg = (() => {
+    if(!errors.username){
+      return null;
+    }
+    if(errors.username.type === "required"){
+      return <p>Username is required!</p>
+    }
+    if(errors.username.type === "minLength" || errors.username.type === "maxLength"){
+      return <p>Username must be 2 - 20 characters long!</p>
+    }
+  })()
   return (
     <div className="submit-form">
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -52,10 +65,10 @@ function LoginForm() {
           type="submit"
           disabled={loading}
         >
-          <p className="btn-arrow-line"></p>
-          <p className="arrow-right"></p>
+         <FaArrowRight className="fa-arrow-right"/>
         </button>
       </form>
+      { errorMsg }
     </div>
   );
 }

@@ -15,7 +15,7 @@ function ProfileTranslationHistory({ translations }) {
       {translationList.length === 0 ? ( //If no translations
         <h3> No translation history. </h3>
       ) : (
-        <h3> Your {translationList.length} latest translations: </h3> //If any translations
+        <h3> Your {translationList.length} latest translations ( newest to oldest ) : </h3> //If any translations
       )}
       <ul className="ul-element">{translationList}</ul>{/*show translation list*/}
     </div>

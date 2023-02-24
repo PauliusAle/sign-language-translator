@@ -20,7 +20,6 @@
     text-align: left;
     font-size: 30px;
 }
-
 .profile-button {
     margin: 5px;
     border-radius: 25px;
@@ -33,7 +32,7 @@
 .submit-button {
     width: 50px;
     position: relative;
-    top: -12px;
+    top: 2px;
 }
 
 .button:hover {
@@ -43,25 +42,6 @@
 .button:active {
     background-color: rgb(74, 83, 185);
 }
-
-.btn-arrow-line {
-    position: absolute;
-    border: 3px solid white;
-    border-radius: 2px;
-    top: 1.5px;
-    left: 5px;
-    width: 30px;
-}
-
-.arrow-right {
-    position: absolute;
-    top: -9px;
-    left: 11px;
-    border: solid white;
-    border-width: 0 6px 6px 0;
-    border-radius: 4px;
-    display: inline-block;
-    padding: 10px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
+.fa-arrow-right {
+    font-size: 37px;
 }

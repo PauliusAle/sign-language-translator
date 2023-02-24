@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { updateUserTranslations } from "../../api/UserApi";
 import { storageSave } from "../../utils/storage";
 import { STORAGE_KEY_USER } from "../../const/storageKeys";
+import { FaArrowRight } from "../../../node_modules/react-icons/fa";
+
 
 //Component for taking input and calling the API.
 function TranslationForm({ user, setUser, setTranslationInput }) {
@@ -45,8 +47,7 @@ function TranslationForm({ user, setUser, setTranslationInput }) {
         ></input>
 
         <button className="button submit-button" type="submit" disabled={isLoading}>
-          <p className="btn-arrow-line"></p>
-          <p className="arrow-right"></p>
+        <FaArrowRight className="fa-arrow-right"/>
         </button>
       </form>
     </div>

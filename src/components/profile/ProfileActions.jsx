@@ -2,7 +2,7 @@ import React from "react";
 import { STORAGE_KEY_USER } from "../../const/storageKeys";
 import { storageDelete, storageSave } from "../../utils/storage";
 import { updateUserTranslations } from "../../api/UserApi";
-//Actions in profile page(only buttons)
+//Component for Actions in profile page(only buttons)
 function ProfileActions({ user, setUser }) {
 
   //Handling logout button click
